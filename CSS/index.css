@@ -1,0 +1,101 @@
+body {
+    background-color: #FFF4F6;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: beige;
+    height: 100%;
+    width: 75%;
+    
+    .websites {
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 100%;
+
+        .web1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+            padding-top: 150px;
+            padding-bottom: 150px;
+
+            .web-text {
+                width: 35%;
+                margin-right: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .web-title {
+                    h3 {
+                        font-size: 45px;
+                        margin: 0;
+                    }
+    
+                    span {
+                        font-style: italic;
+                        font-size: 25px;
+                        margin-top: 0px;
+                        margin-left: 5px;
+                    }
+                }
+
+                .textbox {
+                    margin-top: 50px;
+                    font-size: 17px;
+
+                    p {
+                        margin-top: 35px;
+                        margin-bottom: 35px;
+                    }
+                }
+
+            }
+
+            .slideshow-elements {
+
+                width: 65%;
+                height: 100%;
+
+                .slideshow-main {
+
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        border-radius: 2.5px;
+                        object-fit: cover;
+                    }
+                }
+
+                .slideshow-images {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    gap: 20px;
+                    padding-top: 20px;
+                    width: 100%;
+
+                    .slideshow-image {
+                        width: 100%;
+                        height: 100%;
+
+                        img {
+                            width: 100%;
+                            border-radius: 2.5px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
