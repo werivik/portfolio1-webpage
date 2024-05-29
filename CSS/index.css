@@ -85,6 +85,16 @@ main {
                         border-radius: 2.5px;
                         object-fit: cover;
                     }
+
+                    .progress {
+                        position: absolute;
+                        background-color: white;
+                        padding-left: 5px;
+                        padding-right: 10px;
+                        padding-bottom: 10px;
+                        padding-top: 5px;
+                        border-radius: 0px 0px 25px 0px;
+                    }
                 }
 
                 .slideshow-images {
