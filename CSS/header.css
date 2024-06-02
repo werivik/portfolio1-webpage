@@ -4,7 +4,7 @@ header {
     width: 100%;
     height: 90px;
     backdrop-filter: blur(10px);
-    background-color: rgba(245, 245, 220, 0.500);
+    background-color: rgba(250, 249, 249, 0.500);
     box-shadow: 1px 1px 10px 1px rgba(33, 56, 1, 0.189);
     z-index: 999;
 }
