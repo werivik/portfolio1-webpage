@@ -1,19 +1,22 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
     function initializeSlideshow(containerClass) {
+
         const container = document.querySelector(containerClass);
 
         if (container) {
 
             const mainImage = container.querySelector('.slideshow-main img');
             const mainDesc = container.querySelector('.slideshow-main .desc p');
-            const thumbnails = container.querySelectorAll('.slideshow-image img');
-            const descs = container.querySelectorAll('.slideshow-image .desc p');
+            const thumbnails = Array.from(container.querySelectorAll('.slideshow-image img'));
+            const descs = Array.from(container.querySelectorAll('.slideshow-image .desc p'));
             const leftArrow = container.querySelector('.left');
             const rightArrow = container.querySelector('.right');
             const progress = container.querySelector('.progress');
+            const slideshowImages = container.querySelector('.slideshow-images');
+           
             let currentIndex = 0;
-        
+
             function updateMainContent(index) {
 
                 mainImage.src = thumbnails[index].src;
@@ -23,8 +26,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             function reorderImages() {
 
-                const orderedThumbnails = thumbnails.slice(currentIndex).concat(thumbnails.slice(0, currentIndex));
-                const orderedDescs = desc.slice(currentIndex).concat(desc.slice(0, currentindex));
+                const orderedThumbnails = thumbnails.slice(currentIndex + 1).concat(thumbnails.slice(0, currentIndex)).slice(0, thumbnails.length - 1);
+                const orderedDescs = descs.slice(currentIndex + 1).concat(descs.slice(0, currentIndex)).slice(0, descs.length - 1);
 
                 slideshowImages.innerHTML = '';
                 orderedThumbnails.forEach((thumbnail, index) => {
@@ -44,49 +47,45 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     slideshowImages.appendChild(imageWrapper);
 
                     img.addEventListener('click', () => {
-
-                        currentIndex = (index + currentIndex) % thumbnails.length;
+                        currentIndex = (index + currentIndex + 1) % thumbnails.length;
                         updateMainContent(currentIndex);
                         reorderImages();
-
                     });
+
                 });
             }
-        
-            function showNextImage() {
 
+            function showNextImage() {
                 currentIndex = (currentIndex + 1) % thumbnails.length;
                 updateMainContent(currentIndex);
+                reorderImages();
             }
-        
-            function showPrevImage() {
 
+            function showPrevImage() {
                 currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
                 updateMainContent(currentIndex);
+                reorderImages();
             }
-        
-            rightArrow.addEventListener('click', () => {
-                showNextImage();
-            });
-        
-            leftArrow.addEventListener('click', () => {
-                showPrevImage();
-            });
-        
-            thumbnails.forEach((thumbnail, index) => {
 
+            rightArrow.addEventListener('click', showNextImage);
+            leftArrow.addEventListener('click', showPrevImage);
+
+            thumbnails.forEach((thumbnail, index) => {
+                
                 thumbnail.addEventListener('click', () => {
                     currentIndex = index;
                     updateMainContent(currentIndex);
+                    reorderImages();
                 });
+
             });
-        
+
             updateMainContent(currentIndex);
+            reorderImages();
         }
     }
 
     initializeSlideshow('.web1');
     initializeSlideshow('.web2');
     initializeSlideshow('.web3');
-
 });
