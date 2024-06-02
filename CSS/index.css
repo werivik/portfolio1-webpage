@@ -28,8 +28,6 @@ main {
             padding-top: 75px;
             padding-bottom: 75px;
 
-            aspect-ratio: 16:9;
-
             margin-right: 5%;
             margin-left: 2.5%;
         }
@@ -157,11 +155,11 @@ main {
                     }
 
                     .left {
-                        right: 102%;
+                        right: 101.5%;
                     }
 
                     .right {
-                        left: 103%;
+                        left: 102.5%;
                     }
                 }
 
@@ -278,8 +276,6 @@ main {
             width: 100%;
             padding-top: 75px;
             padding-bottom: 75px;
-
-            aspect-ratio: 16:9;
 
             margin-left: 5%;
             margin-right: 2.5%;

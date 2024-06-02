@@ -27,7 +27,8 @@ nav {
             object-fit: contain;
             background-color: #fdfff4;
             padding: 5px;
-            border-radius: 15px;
+            border-radius: 5px;
+            border-style: double;
         }
     }
 }
@@ -48,16 +49,19 @@ nav {
             text-decoration: none;
             padding: 5px;
             border-radius: 5px;
-
+            border-style: double;
+            border-color: rgba(0, 0, 0, 0);
+            
             &:hover {
                 background-color: #fdfff4;
                 transition: 0.25s;
+                border-color: black;
             }
         } 
 
         .active {
             background-color: #fdfff4;
-            font-weight: bolder;
+            border-color: rgb(0, 0, 0);
             
             &:hover {
                 background-color: rgba(14, 176, 49, 0.348);
