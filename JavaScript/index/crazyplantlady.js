@@ -1,26 +1,28 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-
+    
     const mainImage = document.querySelector('.slideshow-main img');
+    const mainDesc = document.querySelector('.slideshow-main .desc p');
     const thumbnails = document.querySelectorAll('.slideshow-image img');
+    const descs = document.querySelectorAll('.slideshow-image .desc p');
     const leftArrow = document.querySelector('.left');
     const rightArrow = document.querySelector('.right');
     const progress = document.querySelector('.progress');
-
     let currentIndex = 0;
 
-    function updateMainImage(index) {
+    function updateMainContent(index) {
         mainImage.src = thumbnails[index].src;
-        progress.textContent = `${index + 1} / ${thumbnails.length + 1}`;
+        mainDesc.textContent = descs[index].textContent;
+        progress.textContent = `${index + 1} / ${thumbnails.length}`;
     }
 
     function showNextImage() {
         currentIndex = (currentIndex + 1) % thumbnails.length;
-        updateMainImage(currentIndex);
+        updateMainContent(currentIndex);
     }
 
     function showPrevImage() {
-        currentINdex = (currentINdex - 1 + thumbnails.length) % thumbnails.length;
-        updateMainImage(currentIndex);
+        currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+        updateMainContent(currentIndex);
     }
 
     rightArrow.addEventListener('click', () => {
@@ -34,9 +36,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     thumbnails.forEach((thumbnail, index) => {
         thumbnail.addEventListener('click', () => {
             currentIndex = index;
-            updateMainImage(currentIndex)
+            updateMainContent(currentIndex);
         });
     });
 
-    updateMainImage(currentIndex);
+    updateMainContent(currentIndex);
 });

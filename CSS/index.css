@@ -99,10 +99,10 @@ main {
                     img {
                         width: 100%;
                         height: 100%;
-                        height: 500px;
+                        height: 450px;
 
                         border-radius: 2.5px;
-                        object-fit: cover;
+                        object-fit: contain;
                         margin: 0px;
                         padding: 5px;
                         background-color: white;
@@ -204,7 +204,11 @@ main {
                         img {
                             width: 100%;
                             border-radius: 2.5px;
-                            object-fit: cover;
+                            object-fit: contain;
+                        }
+
+                        .desc {
+                            display: none;
                         }
                     }
                 }
