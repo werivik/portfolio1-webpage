@@ -107,6 +107,9 @@ main {
                 max-height: 100%;
                 left: 0;
 
+                transition: opacity 0.25s ease-in-out;
+                opacity: 1;
+
                 img {
                     width: 100%;
                     height: 100%;
@@ -217,6 +220,8 @@ main {
                 gap: 20px;
                 margin-top: 45px;
                 width: 100%;
+
+                transition: transform 0.25s ease;
 
                 .slideshow-image {
                     width: 100%;
