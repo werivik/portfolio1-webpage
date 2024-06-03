@@ -20,20 +20,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
       
         <script src="https://kit.fontawesome.com/2ef99fbf3a.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       
     </head>
 
 <body>
 
     <script src="/JavaScript/index-web.js" defer></script>
+    <script src="/JavaScript/navbar.js" defer></script>
 
     <header>
+        <div class="fillout"></div>
+
         <nav>
-            <a href="/index.html"><img src="/Media/logo/logo1.png" alt=""></a>
-    
+
+            <!--
             <input type="checkbox" class="hamburger-menu" id="hamburger-menu">
             <label for="hamburger-menu" class="hamburger"></label>
-    
+            -->
+
             <ul class="menu">
                 <li><a href="/index.html" class="active">Home</a></li>
                 <li><a href="/portfolio.html">Portfolio</a></li>
@@ -41,6 +46,11 @@
                 <li><a href="/about.html">About</a></li>
             </ul>
         </nav>
+    
+        <svg version="1.1" id="blob" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z"/>
+        </svg>
+
     </header>
     
     <main>   
@@ -52,19 +62,22 @@
 
                     <h3 class="title-name">Weronika Vik</h3>
                     <div class="title-proff">
-                        <h2>FRONT END</h2>
+                        <h2>FRONTEND</h2>
                         <h1>DEVELOPER</h1>
                     </div>
-                    <h4 class="title-work">HTML CSS JavaScript</h4>
+                    <h4 class="title-work">HTML, CSS, JS</h4>
                 
                 </div>
             </div>
 
         </section>
 
-        <section class="web-content">
+        <section class="web-content" id="portfolio">
 
             <div class="websites">
+
+                <h2>My Recent Work</h2>
+
                 <div class="web1">
                     <div class="web-text">
                         <div class="web-title">
@@ -74,8 +87,8 @@
     
                         <div class="textbox">
                             <p><span>About:</span>A blog Website for a individual plant blogger, with a secretive access to the Admin Page post blogs.</p>
-                            <p><span>Process</span></p>
-                            <p><span>Redskaper:</span>Github, Netlify, VS Code, HTML, CSS, Vanilla JavaScript</p>
+                            <p><span>Process:</span></p>
+                            <p><span>Tools:</span>Github, Netlify, VS Code, HTML, CSS, Vanilla JavaScript</p>
                             <p>Learning Points</p>
     
                             <div class="web-redirec1">
@@ -213,8 +226,8 @@
     
                         <div class="textbox">
                             <p><span>About:</span>A blog Website for a individual plant blogger, with a secretive access to the Admin Page post blogs.</p>
-                            <p><span>Process</span></p>
-                            <p><span>Redskaper:</span>Github, Netlify, VS Code, HTML, CSS, Vanilla JavaScript</p>
+                            <p><span>Process:</span></p>
+                            <p><span>Tools:</span>Github, Netlify, VS Code, HTML, CSS, Vanilla JavaScript</p>
                             <p>Learning Points</p>
     
                             <div class="web-redirec1">
@@ -238,8 +251,8 @@
     
                         <div class="textbox">
                             <p><span>About:</span>A blog Website for a individual plant blogger, with a secretive access to the Admin Page post blogs.</p>
-                            <p><span>Process</span></p>
-                            <p><span>Redskaper:</span>Github, Netlify, VS Code, HTML, CSS, Vanilla JavaScript</p>
+                            <p><span>Process:</span></p>
+                            <p><span>Tools:</span>Github, Netlify, VS Code, HTML, CSS, Vanilla JavaScript</p>
                             <p>Learning Points</p>
     
                             <div class="web-redirec1">
@@ -318,7 +331,7 @@
         <div class="content">
 
             <div class="logo">
-                <a href="index.html"><img src="/Media/logo/weriviklogo1.png" alt=""></a>
+                <a href="index.html"><img src="/Media/logo/weriviklogo-madfool.png" alt=""></a>
                 <p><span>TLF:</span>1234 - 567 - 980</p>
                 <p><span>Email:</span>blehblehbleh@gmail.com</p>
             </div>
