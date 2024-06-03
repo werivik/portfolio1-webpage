@@ -7,6 +7,17 @@
     src: url(/font/Madfool.ttf.ttf);
 }
 
+
+header {
+    .fillout {
+        background-color: #61141f;
+    }
+}
+
+#blob {
+    fill: #61141f;
+}
+
 body {
     background-color: #FAF9F9;
     width: 100% - 125px;
@@ -23,7 +34,7 @@ main {
     .front {
 
         top: 0;
-        background-image: url(/Media/swirly-picture.webp);
+        background-image: url(/Media/swirly-red.webp);
         background-size: cover;
         background-position: bottom right;
         width: 100%;
