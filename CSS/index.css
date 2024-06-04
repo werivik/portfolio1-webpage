@@ -35,14 +35,14 @@ main {
     height: 100%;
     width: 100%;
     right: 0;
-    margin-left: 75px;
+    margin-left: 50px;
 
     .front {
         top: 0;
         background-image: url(/Media/download_image_1717365185899.png);
         background-size: cover;
         background-position: bottom right;
-        width: 105%;
+        width: 100%;
         right: 0;
         left: 0;
         height: 100vh;
@@ -567,9 +567,63 @@ main {
 }
 
 @media (max-width: 1000px) {
+    main {
+        .front {
+            background-position: 80% 20%;
+
+            .titles {
+                top: 40%;
+                bottom: 60%;
+            }
+        } 
+    }  
+
     .zoomed-image-container img {
         width: 80%;
     }  
+}
+
+@media (max-width: 800px) {
+ 
+    main {
+        .front {
+            .titles {
+                top: 50%;
+                bottom: 50%;
+            }
+        } 
+     }   
+}
+
+@media (max-width: 750px) {
+    main {
+        height: 100%;
+        width: 100%;
+        right: 0;
+        padding: 0;
+        margin: 0;
+    
+        .web-content {
+            margin: 0;
+            margin-left: 10%;
+            margin-right: 10%;
+
+            .websites {
+
+                .slideshow-elements {
+        
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+        
+                    .slideshow-main {
+                        width: 90%;        
+                    }
+                }
+            }
+        }    
+    }
 }
 
 @media (max-width: 600px) {

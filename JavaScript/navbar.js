@@ -2,6 +2,8 @@
 This Javascript code has been heavily inspired by this codepen by Michael Leonard, link: https://codepen.io/mikel301292/pen/dMYRYZ
 */
 
+
+/*
 document.addEventListener('DOMContentLoaded', function() {
     var height = window.innerHeight,
         x = 0, y = height / 2,
