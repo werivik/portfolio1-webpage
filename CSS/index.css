@@ -423,7 +423,7 @@ main {
 }
 
 .zoomed-image-container {
-
+    
     .zoomed-container {
         width: 100%;
         height: 100%;
@@ -431,7 +431,6 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 0px;
     }
 
     img {
@@ -482,7 +481,6 @@ main {
 
     .desc {
 
-        margin-top: -10px;
         padding-top: 0px;
         width: 100%;
         height: 25px;
@@ -491,7 +489,7 @@ main {
         justify-content: center;
         padding-top: 0px;
         margin-top: 0px;
-        border-radius: 0px 0px 99px 99px;
+        border-radius: 99px 99px 99px 99px;
         text-align: center;
 
         p {
@@ -506,7 +504,7 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 0px 0px 99px 99px;
+            border-radius: 99px 99px 99px 99px;
         }
 
     }

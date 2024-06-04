@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const container = document.querySelector(containerClass);
 
         if (container) {
+
             const mainImage = container.querySelector('.slideshow-main img');
             const mainDesc = container.querySelector('.slideshow-main .desc p');
             const thumbnails = Array.from(container.querySelectorAll('.slideshow-image img'));
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
 
             function createZoomedImageContainer() {
+                
                 const container = document.createElement('div');
                 container.classList.add('zoomed-image-container');
                 container.style.position = 'fixed';
@@ -97,6 +99,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     </div>
                     </div>
                 `;
+
                 document.body.appendChild(container);
                 return container;
             }
