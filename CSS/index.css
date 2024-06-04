@@ -451,11 +451,14 @@ main {
 }
 
 .zoomed-image-container img {
-    max-width: 90%;
+    max-width: 89%;
     max-height: 90%;
     border: 5px solid white;
     box-shadow: 1px 1px 10px 1px rgba(4, 3, 35, 0.189);
     cursor: zoom-out;
+    border-radius: 5px;
+
+    object-fit: contain;
 }
 
 @media (max-width: 1325px) {
@@ -506,4 +509,40 @@ main {
         }
         
     }   
+}
+
+@media (max-width: 1400px) {
+    .zoomed-image-container img {
+        width: 85%;
+    }  
+}
+
+@media (max-width: 1000px) {
+    .zoomed-image-container img {
+        width: 80%;
+    }  
+}
+
+@media (max-width: 600px) {
+    .zoomed-image-container img {
+        width: 75%;
+    }  
+}
+
+@media (max-width: 400px) {
+    .zoomed-image-container img {
+        width: 70%;
+    }  
+}
+
+@media (max-width: 300px) {
+    .zoomed-image-container img {
+        width: 65%;
+    }  
+}
+
+@media (max-width: 200px) {
+    .zoomed-image-container img {
+        width: 60%;
+    }  
 }

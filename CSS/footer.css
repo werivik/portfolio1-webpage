@@ -1,6 +1,6 @@
 footer {
     bottom: 0;
-    width: 100%;
+    width: 105%;
     height: 100%;
     left: 0;
     background-color: #26206A;
@@ -16,7 +16,7 @@ footer {
         flex-wrap: wrap;
 
         margin-left: 11.5%;
-        margin-right: 13.5%;
+        margin-right: 17.5%;
 
         color: #E5E7F0;
 
@@ -27,12 +27,14 @@ footer {
 
             a {
                 height: 50px;
+                margin-bottom: 0px;
 
                 img {
                     width: 250px;
                     object-fit: contain;
                     margin-bottom: 50px;
                     filter: invert(100%);
+                    margin-bottom: 0px;
                 }
             }
 
