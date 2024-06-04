@@ -56,17 +56,19 @@ main {
 
         .titles {
             padding-left: 11.5%;
-            padding-right: 13%;
 
-            position: absolute;
+            position: relative;
             top: 35%;
-            width: 510px;
-
+            bottom: 65%;
             color: #E5E7F0;
 
+            .all-titles {
+                position: absolute;
+                max-width: 100%;
+            }
+
             .title-name {
-                font-size: 20px;
-                    
+                width: 100%;
                 margin-top: 0px;
                 padding-top: 0px;
                 margin-bottom: 10px;
@@ -76,14 +78,18 @@ main {
                 font-weight: 100;
                 margin-bottom: 20px;
                 margin-left: 2.5px;
+
+                font-size: clamp(15px, calc(10vw + 50vh), 20px);         
             }
 
             .title-proff {
 
-                font-size: 200px;
-                line-height: 215px;
+                width: 100%;
+                line-height: 110%;
 
                 font-family: "Madfool";
+
+                font-size: clamp(100px, calc(15vw + 5vh), 200px);          
 
                 h2 {
                     margin-top: 0px;
@@ -104,7 +110,8 @@ main {
             }
 
             .title-work {
-                margin-top: -30px;
+                width: 100%;
+                margin-top: -5%;
                 padding-top: 0px;
                 margin-bottom: 0px;
                 padding-bottom: 0px;
@@ -112,7 +119,7 @@ main {
 
                 font-family: "Ahganirya";
                 font-weight: 100;
-                font-size: 13px;
+                font-size: clamp(9px, calc(10vw + 50vh), 13px);           
             }
         }
     }
@@ -509,6 +516,25 @@ main {
         }
         
     }   
+}
+
+@media (max-height: 600px) {
+    main {
+        .front {    
+            .titles {
+                top: 25%;
+            }
+        }  
+    }
+}
+@media (max-height: 500px) {
+    main {
+        .front {    
+            .titles {
+                top: 10%;
+            }
+        }  
+    }
 }
 
 @media (max-width: 1400px) {
