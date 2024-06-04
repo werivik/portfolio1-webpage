@@ -7,6 +7,22 @@
     src: url(/font/Madfool.ttf.ttf);
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #E5E7F0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #423B80;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #040323;
+}
+
 body {
     background-color: #FAF9F9;
     width: 100% - 125px;
@@ -19,14 +35,16 @@ body {
 main {
     height: 100%;
     width: 100%;
+    right: 0;
 
     .front {
-
         top: 0;
         background-image: url(/Media/download_image_1717365185899.png);
         background-size: cover;
         background-position: bottom right;
-        width: 100%;
+        width: 105%;
+        right: 0;
+        left: 0;
         height: 100vh;
 
         .front-content {
