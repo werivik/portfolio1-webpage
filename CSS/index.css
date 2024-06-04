@@ -25,17 +25,17 @@
 
 body {
     background-color: #FAF9F9;
-    width: 100% - 125px;
+    width: 100%;
     overflow-x: hidden;
     padding: 0;
     margin: 0;
-    margin-left: 125px;
 }
 
 main {
     height: 100%;
     width: 100%;
     right: 0;
+    margin-left: 75px;
 
     .front {
         top: 0;
@@ -423,6 +423,30 @@ main {
 }
 
 .zoomed-image-container {
+
+    .zoomed-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    img {
+        max-width: 89%;
+        max-height: 90%;
+        border: 5px solid white;
+        box-shadow: 1px 1px 10px 1px rgba(4, 3, 35, 0.189);
+        cursor: zoom-out;
+        border-radius: 5px;
+    
+        object-fit: contain;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
     .arrows {
         position: absolute;
         width: 95%;
@@ -455,17 +479,37 @@ main {
             }
         }
     }
-}
 
-.zoomed-image-container img {
-    max-width: 89%;
-    max-height: 90%;
-    border: 5px solid white;
-    box-shadow: 1px 1px 10px 1px rgba(4, 3, 35, 0.189);
-    cursor: zoom-out;
-    border-radius: 5px;
+    .desc {
 
-    object-fit: contain;
+        margin-top: -10px;
+        padding-top: 0px;
+        width: 100%;
+        height: 25px;
+
+        display: flex;
+        justify-content: center;
+        padding-top: 0px;
+        margin-top: 0px;
+        border-radius: 0px 0px 99px 99px;
+        text-align: center;
+
+        p {
+            width: 200px;
+            height: 25px;
+            background-color: white;
+            box-shadow: 1px 1px 10px 1px rgba(4, 3, 35, 0.189);
+            font-size: clamp(7px, calc(2.5vw + 0.9vh), 15px);          
+
+            height: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0px 0px 99px 99px;
+        }
+
+    }
 }
 
 @media (max-width: 1325px) {
@@ -518,25 +562,6 @@ main {
     }   
 }
 
-@media (max-height: 600px) {
-    main {
-        .front {    
-            .titles {
-                top: 25%;
-            }
-        }  
-    }
-}
-@media (max-height: 500px) {
-    main {
-        .front {    
-            .titles {
-                top: 10%;
-            }
-        }  
-    }
-}
-
 @media (max-width: 1400px) {
     .zoomed-image-container img {
         width: 85%;
@@ -571,4 +596,23 @@ main {
     .zoomed-image-container img {
         width: 60%;
     }  
+}
+
+@media (max-height: 600px) {
+    main {
+        .front {    
+            .titles {
+                top: 25%;
+            }
+        }  
+    }
+}
+@media (max-height: 500px) {
+    main {
+        .front {    
+            .titles {
+                top: 10%;
+            }
+        }  
+    }
 }

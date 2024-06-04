@@ -86,10 +86,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 container.style.backdropFilter = 'blur(5px)';
                 container.style.zIndex = '1000';
                 container.innerHTML = `
+                    <div class="zoomed-container">
                     <img src="" alt="">
+                    <div class="desc">
+                        <p></p>
+                    </div>
                     <div class="arrows">
                         <div class="left"><i class="fa-solid fa-caret-left"></i></div>
                         <div class="right"><i class="fa-solid fa-caret-right"></i></div>
+                    </div>
                     </div>
                 `;
                 document.body.appendChild(container);
@@ -102,6 +107,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
 
             function toggleZoom() {
+
                 if (isZoomed) {
                     zoomedImageContainer.remove();
                 } 
@@ -110,6 +116,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     zoomedImageContainer = createZoomedImageContainer();
                     const zoomedImage = zoomedImageContainer.querySelector('img');
                     zoomedImage.src = mainImage.src;
+                    const desc = zoomedImageContainer.querySelector('.desc p');
+                    desc.textContent = mainDesc.textContent;
                     zoomedImage.addEventListener('click', toggleZoom);
                     zoomedImageContainer.querySelector('.left').addEventListener('click', showPrevImage);
                     zoomedImageContainer.querySelector('.right').addEventListener('click', showNextImage);
