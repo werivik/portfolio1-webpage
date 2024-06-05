@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const rightArrow = container.querySelector('.right');
             const progress = container.querySelector('.progress');
             const slideshowImages = container.querySelector('.slideshow-images');
+            
             let currentIndex = 0;
             let isZoomed = false;
             let zoomedImageContainer = null;
@@ -33,13 +34,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     const imageWrapper = document.createElement('div');
                     imageWrapper.classList.add('slideshow-image');
                     const img = document.createElement('img');
+
                     img.src = thumbnail.src;
                     img.alt = thumbnail.alt;
+
                     const desc = document.createElement('div');
                     desc.classList.add('desc');
                     const descP = document.createElement('p');
                     descP.textContent = orderedDescs[index].textContent;
                     desc.appendChild(descP);
+
                     imageWrapper.appendChild(img);
                     imageWrapper.appendChild(desc);
                     slideshowImages.appendChild(imageWrapper);
@@ -87,6 +91,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 container.style.backgroundColor = 'rgba(0, 0, 0, 0.600)';
                 container.style.backdropFilter = 'blur(5px)';
                 container.style.zIndex = '1000';
+
                 container.innerHTML = `
                     <div class="zoomed-container">
                     <img src="" alt="">
@@ -105,8 +110,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
 
             function updateZoomedImage(index) {
+
                 const zoomedImage = zoomedImageContainer.querySelector('img');
                 zoomedImage.src = thumbnails[index].src;
+
+                const desc = zoomedImageContainer.querySelector('.desc p');
+                desc.textContent = descs[index].textContent;
             }
 
             function toggleZoom() {
@@ -119,8 +128,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     zoomedImageContainer = createZoomedImageContainer();
                     const zoomedImage = zoomedImageContainer.querySelector('img');
                     zoomedImage.src = mainImage.src;
+
                     const desc = zoomedImageContainer.querySelector('.desc p');
                     desc.textContent = mainDesc.textContent;
+
                     zoomedImage.addEventListener('click', toggleZoom);
                     zoomedImageContainer.querySelector('.left').addEventListener('click', showPrevImage);
                     zoomedImageContainer.querySelector('.right').addEventListener('click', showNextImage);
