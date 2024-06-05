@@ -71,8 +71,7 @@ main {
             padding-left: 11.5%;
 
             position: relative;
-            top: 35%;
-            bottom: 65%;
+            top: 55%;
             color: #E5E7F0;
 
             .all-titles {
@@ -84,15 +83,14 @@ main {
                 width: 100%;
                 margin-top: 0px;
                 padding-top: 0px;
-                margin-bottom: 10px;
                 padding-bottom: 0px;
 
                 font-family: "Ahganirya";
                 font-weight: 100;
-                margin-bottom: 20px;
                 margin-left: 2.5px;
+                line-height: 100%;
 
-                font-size: clamp(15px, calc(10vw + 50vh), 20px);         
+                font-size: 15px;
             }
 
             .title-proff {
@@ -102,7 +100,7 @@ main {
 
                 font-family: "Madfool";
 
-                font-size: clamp(100px, calc(15vw + 5vh), 200px);          
+                font-size: clamp(125px, calc(15vw + 5vh), 200px);          
 
                 h1, h2 {
                     margin: 0;
@@ -123,7 +121,7 @@ main {
 
                 font-family: "Ahganirya";
                 font-weight: 100;
-                font-size: clamp(9px, calc(10vw + 50vh), 13px);           
+                font-size: 13px;
             }
         }
     }
@@ -585,31 +583,11 @@ main.blur {
 @media (max-width: 1000px) {
     main {
         margin-left: 0px;
-        .front {
-            background-position: 80% 20%;
-
-            .titles {
-                top: 40%;
-                bottom: 60%;
-            }
-        } 
     }  
 
     .zoomed-image-container img {
         width: 80%;
     }  
-}
-
-@media (max-width: 800px) {
- 
-    main {
-        .front {
-            .titles {
-                top: 50%;
-                bottom: 50%;
-            }
-        } 
-     }   
 }
 
 @media (max-width: 750px) {
@@ -665,23 +643,4 @@ main.blur {
     .zoomed-image-container img {
         width: 60%;
     }  
-}
-
-@media (max-height: 600px) {
-    main {
-        .front {    
-            .titles {
-                top: 25%;
-            }
-        }  
-    }
-}
-@media (max-height: 500px) {
-    main {
-        .front {    
-            .titles {
-                top: 10%;
-            }
-        }  
-    }
 }
