@@ -211,18 +211,17 @@ main {
                         font-weight: bold;
                     }
     
-                    .web-redirec1 {
-    
-                        margin-top: 10%;
+                    .web-redirec1 {    
+                        margin-top: 45px;
     
                         p {
-                            margin-bottom: 2.5%;
+                            margin-bottom: 20px;
                         }
     
                         .web-links {
                             display: flex;
                             flex-direction: column;
-                            gap: 1.5%;
+                            gap: 15px;
     
                             i {
                                 margin-right: 0.5%;
@@ -418,28 +417,6 @@ main {
                         }
                     }
                 }
-    
-                .web-redirec2 {
-                    display: none;
-                    flex-direction: column;
-                    gap: 15px;
-                    width: 91%;
-                    margin-left: 2.5%;
-                    margin-top: 25px;
-    
-                    p {
-                        margin-bottom: 10px;
-                    }
-    
-                    .web-links {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 15px;
-                        i {
-                            margin-right: 0.5%;
-                        }
-                    }
-                }
             }
     
             .web2 {
@@ -572,6 +549,7 @@ main.blur {
                 }
         
                 .slideshow-elements {
+                    margin-top: 50px;
                     width: 100%;
                     margin-left: 0;
                     margin-right: 0;
@@ -694,6 +672,8 @@ main.blur {
         .web-content {
             .websites {
                 .slideshow-elements {
+
+                    margin-top: 25px;
                     
                     .slideshow-main {
 

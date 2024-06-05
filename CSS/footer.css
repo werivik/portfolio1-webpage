@@ -108,3 +108,31 @@ footer {
         }
     }
 }
+
+@media (max-width: 550px) {
+    footer {
+        .content {
+            .logo {
+                a {    
+                    img {
+                        width: 200px;
+                    }
+                }
+
+            }
+        
+            .links {
+                width: 400px;
+        
+                .portfolio, .contact, .about {
+                    margin-right: 5%;
+        
+                    li {
+                        margin-top: 15px;
+                        width: 125px;
+                    }
+                }
+            }
+        }
+    }  
+}
