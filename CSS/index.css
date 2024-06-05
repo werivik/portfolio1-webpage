@@ -597,7 +597,25 @@ main.blur {
         right: 0;
         padding: 0;
         margin: 0;
-    
+
+        .front {
+            .front-content {
+                .titles {
+                    .all-titles{
+                        .title-name {
+                            font-size: 10px;
+                            color: pink;
+                        }
+
+                        .title-work {
+                            font-size: 7px;
+                            color: pink;
+                        }
+                    }
+                }
+            }
+        }
+        
         .web-content {
             margin: 0;
             margin-left: 10%;
@@ -628,28 +646,6 @@ main.blur {
 }
 
 @media (max-width: 400px) {
-
-    main {
-
-        .front {
-            .front-content {
-                .titles {
-                    .all-titles{
-                        .title-name {
-                            font-size: 10px;
-                            color: pink;
-                        }
-
-                        .title-work {
-                            font-size: 7px;
-                            color: pink;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     .zoomed-image-container img {
         width: 70%;
     }  
