@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const mainContent = document.querySelector('main');
         mainContent.classList.toggle('blur');
+
+        const footerContent = document.querySelector('footer');
+        footerContent.classList.toggle('blur');
     }
 
     toggleIcon.addEventListener('click', toggleHeader);
@@ -46,9 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
     checkScreenWidth();
 
     const mainContent = document.querySelector('main');
+    const footerContent = document.querySelector('footer');
 
     header.addEventListener('click', () => {
         mainContent.classList.toggle('blur');
+        footerContent.classList.toggle('blur');
     });
 
 });

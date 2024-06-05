@@ -438,7 +438,7 @@ main {
 }
 
 main.blur {
-    filter: blur(2.5px);
+    filter: blur(4px);
 }
 
 .zoomed-image-container {
