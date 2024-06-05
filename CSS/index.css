@@ -725,7 +725,7 @@ main.blur {
     .zoomed-image-container {
     
         img {
-            max-width: 80%;
+            max-width: 75%;
         }
         
     }
