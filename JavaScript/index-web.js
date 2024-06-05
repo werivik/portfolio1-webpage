@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const rightArrow = container.querySelector('.right');
             const progress = container.querySelector('.progress');
             const slideshowImages = container.querySelector('.slideshow-images');
-            
+
             let currentIndex = 0;
             let isZoomed = false;
             let zoomedImageContainer = null;
@@ -25,37 +25,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
 
             function reorderImages() {
-
-                const orderedThumbnails = thumbnails.slice(currentIndex + 1).concat(thumbnails.slice(0, currentIndex)).slice(0, thumbnails.length - 1);
-                const orderedDescs = descs.slice(currentIndex + 1).concat(descs.slice(0, currentIndex)).slice(0, descs.length - 1);
+                let numToShow = thumbnails.length >= 4 ? 4 : thumbnails.length;
                 slideshowImages.innerHTML = '';
-                orderedThumbnails.forEach((thumbnail, index) => {
-
+            
+                for (let i = 0; i < numToShow; i++) {
+                    const index = (currentIndex + i) % thumbnails.length;
+                    const thumbnail = thumbnails[index];
+                    const desc = descs[index];
+            
                     const imageWrapper = document.createElement('div');
                     imageWrapper.classList.add('slideshow-image');
                     const img = document.createElement('img');
-
+            
                     img.src = thumbnail.src;
                     img.alt = thumbnail.alt;
-
-                    const desc = document.createElement('div');
-                    desc.classList.add('desc');
+            
+                    const descElement = document.createElement('div');
+                    descElement.classList.add('desc');
                     const descP = document.createElement('p');
-                    descP.textContent = orderedDescs[index].textContent;
-                    desc.appendChild(descP);
-
+                    descP.textContent = desc.textContent;
+                    descElement.appendChild(descP);
+            
                     imageWrapper.appendChild(img);
-                    imageWrapper.appendChild(desc);
+                    imageWrapper.appendChild(descElement);
                     slideshowImages.appendChild(imageWrapper);
-                    
+            
                     img.addEventListener('click', () => {
-                        currentIndex = (index + currentIndex + 1) % thumbnails.length;
+                        currentIndex = index;
                         updateMainContent(currentIndex);
                         reorderImages();
                     });
-                });
+                }
             }
-
+            
             function showNextImage() {
                 currentIndex = (currentIndex + 1) % thumbnails.length;
                 updateMainContent(currentIndex);
@@ -65,7 +67,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     updateZoomedImage(currentIndex);
                 }
             }
-
+            
             function showPrevImage() {
                 currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
                 updateMainContent(currentIndex);
