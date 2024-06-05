@@ -603,19 +603,17 @@ main.blur {
                 .titles {
                     .all-titles{
                         .title-name {
-                            font-size: 10px;
-                            color: pink;
+                            font-size: 13px;
                         }
 
                         .title-work {
                             font-size: 7px;
-                            color: pink;
                         }
                     }
                 }
             }
         }
-        
+
         .web-content {
             margin: 0;
             margin-left: 10%;
