@@ -719,7 +719,15 @@ main.blur {
                     }
                 }
             }
-        }  
+        } 
+    }
+
+    .zoomed-image-container {
+    
+        img {
+            max-width: 80%;
+        }
+        
     }
 }
 
