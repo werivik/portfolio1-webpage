@@ -705,11 +705,17 @@ main.blur {
                     
                     .slideshow-main {
 
+                        width: 85%;
+
                         .desc {
                             top: 94%;
         
                         }
         
+                    }
+
+                    .slideshow-images {
+                        width: 85%;
                     }
                 }
             }
