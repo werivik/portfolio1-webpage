@@ -670,6 +670,8 @@ main.blur {
         }
 
         .web-content {
+            margin-left: 7%;
+            margin-right: 7%;
             .websites {
                 .slideshow-elements {
 
