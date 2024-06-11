@@ -23,6 +23,10 @@
     background: #040323;
 }
 
+html {
+    width: 100%;
+}
+
 body {
     background-color: #FAF9F9;
     width: 100%;
@@ -41,10 +45,12 @@ main {
     height: 100%;
     width: 100%;
     right: 0;
+    left: 0;
     top: 0;
+    position: relative;
 
     .front {
-        position: relative;
+        position: fixed;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,6 +59,8 @@ main {
         right: 0;
         left: 0;
         height: 100vh;
+
+        z-index: 1;
 
         img {
             width: 100%;
@@ -128,9 +136,23 @@ main {
         }
     }
 
+    .web {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        margin-top: 100vh;
+        background-color: #ffffff;
+        background-color: #e9e5f0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        left: 0;
+        right: 0;
+    }
+
     .web-content {
 
-        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -138,7 +160,7 @@ main {
 
         margin-left: 10%;
         margin-right: 10%;
-        background-color: #e9e5f0;
+        background-color: #ffffff;
         padding-bottom: 50px;
 
         transition: filter 0.5s ease-in-out;
