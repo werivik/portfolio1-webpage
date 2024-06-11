@@ -27,6 +27,10 @@ header {
     background-color: #a74670;
 }
 
+.toggle-icon  {
+    background-color: #a74670;
+}
+
 footer {
     background-color: #560B1d;
 }
@@ -129,8 +133,9 @@ main {
 
         margin-left: 10%;
         margin-right: 10%;
-        background-color: #e8e2ea;
-        padding-bottom: 50px;
+        background-color: #ffefef;
+        padding-bottom: 100px;
+        padding-top: 50px;
 
         transition: filter 0.5s ease-in-out;
 
