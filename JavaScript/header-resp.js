@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.body.appendChild(toggleIcon);
 
+    const mainContent = document.querySelector('main');
+    const footerContent = document.querySelector('footer');
+
     function toggleHeader() {
 
         if (header.classList.contains('hidden')) {
@@ -22,38 +25,25 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleIcon.style.left = '0';
         }
 
-        const mainContent = document.querySelector('main');
         mainContent.classList.toggle('blur');
 
-        const footerContent = document.querySelector('footer');
         footerContent.classList.toggle('blur');
     }
 
     toggleIcon.addEventListener('click', toggleHeader);
 
-    function checkScreenWidth() {
+    function initializeHeader() {
 
-        if (window.innerWidth <= 1000) {
-            header.classList.add('hidden');
-            toggleIcon.style.left = '0';
-            toggleIcon.classList.add('show');
-        } 
-        
-        else {
-            header.classList.remove('hidden');
-            toggleIcon.classList.remove('show');
-        }
+        header.classList.add('hidden');
+        toggleIcon.style.left = '0';
+        toggleIcon.classList.add('show');
     }
-
-    window.addEventListener('resize', checkScreenWidth);
-    checkScreenWidth();
-
-    const mainContent = document.querySelector('main');
-    const footerContent = document.querySelector('footer');
 
     header.addEventListener('click', () => {
         mainContent.classList.toggle('blur');
         footerContent.classList.toggle('blur');
     });
+
+    initializeHeader();
 
 });
