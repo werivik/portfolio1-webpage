@@ -142,7 +142,6 @@ main {
         z-index: 2;
         margin-top: 100vh;
         background-color: #ffffff;
-        background-color: #e9e5f0;
         margin-left: 0;
         margin-right: 0;
         padding-left: 0;
@@ -160,8 +159,8 @@ main {
 
         margin-left: 10%;
         margin-right: 10%;
-        background-color: #ffffff;
-        padding-bottom: 50px;
+        background-color: #e9e5f0;
+        padding-bottom: 100px;
 
         transition: filter 0.5s ease-in-out;
 
@@ -203,36 +202,14 @@ main {
                         z-index: 2;
                     }
                 }
-
-                /*
-                .profile-pic::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-
-                    margin-left: 4%;
-                    margin-top: 70px;
-
-                    height: 370px;
-                    width: 370px;
-
-                    border-radius: 50%;
-                    border: solid 20px transparent;
-                    background: url(/Media/swirls/purple.png) center/cover no-repeat;
-                    pointer-events: none; 
-                    z-index: 1; 
-
-                    
-                }
-                */
             }
 
             .aboutme-text {
                 margin-right: 7%;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
                 a {
                     color: #040323;
@@ -244,6 +221,7 @@ main {
                     font-size: 25px;
                     font-family: "Ahganirya";
                     color: #040323;
+                    margin-top: 0;
                 }
             }
         }
