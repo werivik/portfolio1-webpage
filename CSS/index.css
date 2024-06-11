@@ -27,6 +27,7 @@ body {
     background-color: #FAF9F9;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: scroll;
     padding: 0;
     margin: 0;
     left: 0;
@@ -83,7 +84,7 @@ main {
                 width: 100%;
                 margin-top: 0px;
                 padding-top: 0px;
-                padding-bottom: 0px;
+                padding-bottom: 10px;
 
                 font-family: "Ahganirya";
                 font-weight: 100;
@@ -136,7 +137,7 @@ main {
 
         margin-left: 10%;
         margin-right: 10%;
-        background-color: #E5E7F0;
+        background-color: #e9e5f0;
         padding-bottom: 50px;
 
         transition: filter 0.5s ease-in-out;
@@ -169,6 +170,12 @@ main {
             .aboutme-text {
                 margin-right: 7%;
                 width: 100%;
+
+                a {
+                    color: #040323;
+                    text-decoration: none;
+                    border-bottom: solid #040323 1px;
+                }
 
                 h2 {
                     font-size: 25px;
